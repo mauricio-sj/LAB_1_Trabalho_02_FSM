@@ -1,0 +1,15 @@
+C:/LAB_1/TRABALHO_02_FSM/modelsim/fsm_tb.v {1 {vlog -work work -stats=none C:/LAB_1/TRABALHO_02_FSM/modelsim/fsm_tb.v
+Model Technology ModelSim - Intel FPGA Edition vlog 2020.1 Compiler 2020.02 Feb 28 2020
+-- Compiling module tb_fsm
+
+Top level modules:
+	tb_fsm
+
+} {} {}} C:/LAB_1/TRABALHO_02_FSM/modelsim/FSM.v {1 {vlog -work work -stats=none {C:\LAB_1\TRABALHO_02_FSM\modelsim\FSM.v}
+Model Technology ModelSim - Intel FPGA Edition vlog 2020.1 Compiler 2020.02 Feb 28 2020
+-- Compiling module FSM
+
+Top level modules:
+	FSM
+
+} {} {}}
