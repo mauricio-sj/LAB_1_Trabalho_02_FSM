@@ -1,5 +1,5 @@
 Analysis & Synthesis report for FSM
-Tue Sep 14 22:58:57 2021
+Wed Sep 15 19:33:17 2021
 Quartus Prime Version 20.1.1 Build 720 11/11/2020 SJ Lite Edition
 
 
@@ -47,7 +47,7 @@ https://fpgasoftware.intel.com/eula.
 +----------------------------------------------------------------------------------+
 ; Analysis & Synthesis Summary                                                     ;
 +------------------------------------+---------------------------------------------+
-; Analysis & Synthesis Status        ; Successful - Tue Sep 14 22:58:57 2021       ;
+; Analysis & Synthesis Status        ; Successful - Wed Sep 15 19:33:17 2021       ;
 ; Quartus Prime Version              ; 20.1.1 Build 720 11/11/2020 SJ Lite Edition ;
 ; Revision Name                      ; FSM                                         ;
 ; Top-level Entity Name              ; FSM                                         ;
@@ -167,13 +167,13 @@ https://fpgasoftware.intel.com/eula.
 +----------------------------+-------------+
 
 
-+------------------------------------------------------------------------------------------------------------------------+
-; Analysis & Synthesis Source Files Read                                                                                 ;
-+----------------------------------+-----------------+------------------------+--------------------------------+---------+
-; File Name with User-Entered Path ; Used in Netlist ; File Type              ; File Name with Absolute Path   ; Library ;
-+----------------------------------+-----------------+------------------------+--------------------------------+---------+
-; FSM.v                            ; yes             ; User Verilog HDL File  ; C:/LAB_1/TRABALHO_02_FSM/FSM.v ;         ;
-+----------------------------------+-----------------+------------------------+--------------------------------+---------+
++---------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Analysis & Synthesis Source Files Read                                                                                                                  ;
++----------------------------------+-----------------+------------------------+-----------------------------------------------------------------+---------+
+; File Name with User-Entered Path ; Used in Netlist ; File Type              ; File Name with Absolute Path                                    ; Library ;
++----------------------------------+-----------------+------------------------+-----------------------------------------------------------------+---------+
+; FSM.v                            ; yes             ; User Verilog HDL File  ; E:/Documents/GitHub/Trabalho_02_FSM/LAB_1_Trabalho_02_FSM/FSM.v ;         ;
++----------------------------------+-----------------+------------------------+-----------------------------------------------------------------+---------+
 
 
 +---------------------------------------------------------+
@@ -312,14 +312,13 @@ Note: In order to hide this table in the UI and the text report file, please set
 Info: *******************************************************************
 Info: Running Quartus Prime Analysis & Synthesis
     Info: Version 20.1.1 Build 720 11/11/2020 SJ Lite Edition
-    Info: Processing started: Tue Sep 14 22:58:45 2021
+    Info: Processing started: Wed Sep 15 19:33:05 2021
 Info: Command: quartus_map --read_settings_files=on --write_settings_files=off FSM -c FSM
 Warning (18236): Number of processors has not been specified which may cause overloading on shared machines.  Set the global assignment NUM_PARALLEL_PROCESSORS in your QSF to an appropriate value for best performance.
 Info (20030): Parallel compilation is enabled and will use 8 of the 8 processors detected
 Info (12021): Found 1 design units, including 1 entities, in source file fsm.v
-    Info (12023): Found entity 1: FSM File: C:/LAB_1/TRABALHO_02_FSM/FSM.v Line: 1
+    Info (12023): Found entity 1: FSM File: E:/Documents/GitHub/Trabalho_02_FSM/LAB_1_Trabalho_02_FSM/FSM.v Line: 1
 Info (12127): Elaborating entity "FSM" for the top level hierarchy
-Warning (10235): Verilog HDL Always Construct warning at FSM.v(29): variable "state" is read inside the Always Construct but isn't in the Always Construct's Event Control File: C:/LAB_1/TRABALHO_02_FSM/FSM.v Line: 29
 Info (286030): Timing-Driven Synthesis is running
 Info (17049): 3 registers lost all their fanouts during netlist optimizations.
 Info (16010): Generating hard_block partition "hard_block:auto_generated_inst"
@@ -328,10 +327,10 @@ Info (21057): Implemented 8 device resources after synthesis - the final resourc
     Info (21058): Implemented 3 input pins
     Info (21059): Implemented 1 output pins
     Info (21061): Implemented 4 logic cells
-Info: Quartus Prime Analysis & Synthesis was successful. 0 errors, 2 warnings
+Info: Quartus Prime Analysis & Synthesis was successful. 0 errors, 1 warning
     Info: Peak virtual memory: 4798 megabytes
-    Info: Processing ended: Tue Sep 14 22:58:57 2021
+    Info: Processing ended: Wed Sep 15 19:33:17 2021
     Info: Elapsed time: 00:00:12
-    Info: Total CPU time (on all processors): 00:00:24
+    Info: Total CPU time (on all processors): 00:00:27
 
 
