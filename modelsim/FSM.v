@@ -10,9 +10,9 @@ module FSM(clk, rst, inp, outp);
     parameter d = 2'b11;
 
 
-    always @(posedge clk)
+    always @(posedge clk, posedge rst)
     begin
-        if(rst)
+        if(rst==1)
         begin
 		state<=a; //state A
         end
@@ -24,14 +24,22 @@ module FSM(clk, rst, inp, outp);
 
     always @(inp)
     begin
+	 
         next_state=a;
-        outp = 0;
+        outp = 1'b0;
+
         case(state)
             a:
             begin
                 if(inp==1'b1)
                 begin
                     next_state=b;
+						  outp = 1'b0;
+                end
+                else
+                begin
+                    next_state=a;
+						  outp = 1'b1;
                 end
             end
             b:
@@ -39,10 +47,12 @@ module FSM(clk, rst, inp, outp);
                 if(inp==1'b1)
                 begin
                     next_state=c;
+						  outp = 1'b0;
                 end
                 else
                 begin
                     next_state=a;
+						  outp = 1'b1;
                 end
             end
             c:
@@ -50,11 +60,12 @@ module FSM(clk, rst, inp, outp);
                 if(inp==1'b1)
                 begin
                     next_state=a;
-                    outp=1;
+                    outp = 1'b0;
                 end
                 else
                 begin
                     next_state=d;
+						  outp = 1'b1;
                 end
             end
 
@@ -63,18 +74,24 @@ module FSM(clk, rst, inp, outp);
                 if(inp==1'b0)
                 begin
                     next_state=a;
+						  outp = 1'b0;
                 end
                 else
                 begin
                     next_state=d;
+						  outp = 1'b0;
                 end
             end
             default:
             begin
                 next_state=a;
-                outp = 0;
+                outp = 1'b0;
             end
         endcase
     end
+	 
+
+
+ 
 
 endmodule
