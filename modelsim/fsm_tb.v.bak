@@ -14,7 +14,8 @@ module tb_fsm;
  FSM test_unit(
             .inp(inp),       
             .clk(clk),
-            .rst(rst)
+            .rst(rst),
+	    .outp(outp)
 );
 initial begin
  clk = 0;
@@ -25,17 +26,22 @@ initial begin
   inp = 0;
   rst = 1;
   // Wait 100 ns for global reset to finish
-  #30;
-      rst = 0;
-  #40;
+  @(posedge clk)
+  @(negedge clk)
+  rst = 0;
   inp = 1;
-  #10;
+  #1
+  @(negedge clk)
+  @(negedge clk)
+  inp = 0;
+  @(posedge clk)
+  $display("inp:%d clk:%d  rst:%d outp:%d", inp, clk, rst, outp);
   inp = 1;
-  #10;
-  inp = 1; 
-  #20;
-  inp = 0; 
-
+  #1
+  @(negedge clk)
+  @(negedge clk)
+  @(negedge clk)
+  $display("inp:%d clk:%d  rst:%d outp:%d", inp, clk, rst, outp);
 
  end
       

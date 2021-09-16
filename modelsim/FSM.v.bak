@@ -22,7 +22,7 @@ module FSM(clk, rst, inp, outp);
 	end
     end
 
-    always @(inp)
+    always @(inp, state)
     begin
 	 
         next_state=a;
