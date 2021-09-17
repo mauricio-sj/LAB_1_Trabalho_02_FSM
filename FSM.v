@@ -22,7 +22,7 @@ module FSM(clk, rst, inp, outp);
 	end
     end
 
-    always @(inp)
+    always @(inp, state)
     begin
 	 
         next_state=a;
@@ -39,7 +39,7 @@ module FSM(clk, rst, inp, outp);
                 else
                 begin
                     next_state=a;
-						  outp = 1'b1;
+						  outp = 1'b0;
                 end
             end
             b:
@@ -52,19 +52,19 @@ module FSM(clk, rst, inp, outp);
                 else
                 begin
                     next_state=a;
-						  outp = 1'b1;
+						  outp = 1'b0;
                 end
             end
             c:
             begin
                 if(inp==1'b1)
                 begin
-                    next_state=a;
+                    next_state=d;
                     outp = 1'b0;
                 end
                 else
                 begin
-                    next_state=d;
+                    next_state=a;
 						  outp = 1'b1;
                 end
             end
